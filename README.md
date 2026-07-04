@@ -2,8 +2,6 @@
 
 > Build professional software for a world where AI is a first-class collaborator.
 
----
-
 ## Why
 
 Traditional software was designed for human users.
@@ -13,8 +11,6 @@ Today, AI is becoming a core participant in professional work, yet most software
 Tsingz AI-Native Workflow explores a different approach.
 
 Instead of treating AI as a feature, we design software where humans and AI collaborate through structured workflows, explicit permissions, shared memory, and plug-and-play components.
-
----
 
 ## Vision
 
@@ -29,8 +25,6 @@ We believe the next generation of professional software should be:
 
 AI should collaborate with professionals, not replace them.
 
----
-
 ## Tsingz Development Standard (TDS)
 
 Tsingz follows the **Tsingz Development Standard (TDS)** — a documentation-first software engineering methodology designed for AI-native development.
@@ -41,23 +35,13 @@ Every AI collaborator should understand the project before writing code.
 
 The implementation should always follow the architecture, never redefine it.
 
----
-
 ## AI-Native Development
 
-TDS organizes software into four layers.
+TDS organizes software into five first-class layers.
 
 ### 1. Documentation
 
-Defines intent.
-
-Architecture.
-
-Design.
-
-Business rules.
-
-Project knowledge.
+Defines intent, architecture, design, business rules, and project knowledge.
 
 ### 2. Interfaces
 
@@ -73,15 +57,21 @@ Tests become executable specifications rather than post-development validation.
 
 Both unit tests and integration tests are considered first-class project artifacts.
 
-### 4. Implementation
+### 4. Context for AI
 
-Code is an implementation of the previous three layers.
+Defines the attention layer for AI collaborators.
+
+The `for-ai/` directory tells AI what to read first, where to focus, what each directory depends on, and which files must stay aligned.
+
+The repository is treated as shared memory between humans and AI.
+
+### 5. Implementation
+
+Code is an implementation of the previous layers.
 
 Implementation should remain replaceable.
 
 The architecture should survive regardless of programming language, framework, or AI model.
-
----
 
 ## Core Principles
 
@@ -89,14 +79,13 @@ The architecture should survive regardless of programming language, framework, o
 - Architecture Before Code
 - Interface Before Implementation
 - Tests Define Behavior
+- Context Guides AI Attention
 - AI Reads Before It Writes
 - Workflow First
 - Human in the Loop
 - Permission by Design
 - Plug and Play
 - AI Friendly
-
----
 
 ## Current Focus
 
@@ -110,22 +99,22 @@ These industries share a common challenge:
 
 Highly specialized experts work across fragmented workflows with disconnected software.
 
----
-
 ## Repository Structure
 
-```
+```text
 README.md
 core-principles.md
 ROADMAP.md
 
+for-ai/
 docs/
 interfaces/
 tests/
 src/
+examples/
+scripts/
+tds/
 ```
-
----
 
 ## Status
 
@@ -135,12 +124,11 @@ The project is currently defining:
 
 - Tsingz Development Standard (TDS)
 - AI-Native Workflow Architecture
+- AI collaboration context layer
 - Interface Contracts
 - Testing Strategy
 
 Implementation will begin after the architecture is sufficiently defined.
-
----
 
 ## Long-Term Goal
 

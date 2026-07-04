@@ -1,52 +1,46 @@
 # Core Principles
 
-## Purpose
+This document is the primary source of truth for both human contributors and AI collaborators.
 
-This document defines the core principles of Tsingz AI-Native Workflow.
+When conflicts arise between implementation and these principles, the principles take precedence.
 
-It is written for both humans and AI collaborators.
+## Foundational Principle
 
-Tsingz treats documentation as long-term project memory.  
-AI should be able to read, understand, and follow these principles when designing, generating, reviewing, or modifying the system.
+Architecture is the source of truth.
 
-## Philosophy
+Code is one implementation.
 
-Traditional software was designed around human users.
+## Repository as Shared Memory
 
-Tsingz is designed for a world where humans and AI work together as collaborators inside structured workflows.
+The repository is the shared long-term memory between humans and AI collaborators.
 
-AI is not an external assistant added on top of software.
+Important project knowledge should live in versioned files, not only in conversation history.
 
-AI is a first-class participant in the software architecture.
+## Documentation First
 
-## Principles
+Documentation defines intent, architecture, design, and business rules.
 
-### 1. Workflow First
+AI collaborators should understand documentation before generating or modifying implementation.
 
-Every meaningful action belongs to a workflow.
+## Interface Before Implementation
 
-A workflow defines context, responsibility, state, permission, and next steps.
+Interfaces define contracts.
 
-### 2. Human in the Loop
+Implementation must follow interfaces, not redefine them.
 
-AI assists.  
-Humans decide.
+## Tests Define Behavior
 
-Professional judgment, accountability, and final approval remain with human participants.
+Tests are executable specifications.
 
-### 3. Permission by Design
+Behavior should be specified before implementation whenever possible.
 
-Data sharing must be explicit.
+## Context Guides AI Attention
 
-Participants should know what data is used, who can access it, and for what purpose.
+The `for-ai/` directory guides AI collaborators toward the right files, dependencies, and attention focus.
 
-### 4. Plug and Play
+AI should not read randomly or start from source code alone.
 
-Capabilities should be built as independent modules or plugins.
-
-The system should be composed, extended, and replaced without rewriting the whole application.
-
-### 5. AI Friendly
+## AI Friendly
 
 The system should be easy for AI to understand and maintain.
 
@@ -59,14 +53,16 @@ This means:
 - minimal hidden logic
 - documented decisions
 
-### 6. Small Core, Flexible Edges
+## Small Core, Flexible Edges
 
 The core should stay small and stable.
 
-Industry-specific features should live in plugins, workflows, or adapters.
+Industry-specific features should live in plugins, workflows, adapters, or examples.
 
-## Long-Term Vision
+## Human in the Loop
 
-Tsingz aims to build AI-native workflow infrastructure for professional software.
+AI assists.
 
-The goal is not to replace professionals, but to help humans and AI collaborate inside systems that are structured, auditable, permission-aware, and easy to evolve.
+Humans decide.
+
+Professional judgment, accountability, and final approval remain with human participants.
